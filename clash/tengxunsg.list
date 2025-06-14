@@ -1,0 +1,9 @@
+# 腾讯云在新加坡的数据中心
+该ip为腾讯云新加坡的数据中心，wechat 会用到该ip
+IP-CIDR,43.156.0.0/15,no-resolve   
+
+
+# 腾讯云相关的域名D
+#OMAIN-SUFFIX,tencentcloud.com,Proxy
+#DOMAIN-SUFFIX,qcloud.com,Proxy
+#DOMAIN-KEYWORD,tencent,Proxy
