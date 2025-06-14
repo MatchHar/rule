@@ -1,12 +1,6 @@
 # 腾讯云在新加坡的数据中心
 # 该ip为腾讯云新加坡的数据中心，wechat 会用到该ip
-IP-CIDR,43.156.0.0/15,no-resolve   
-IP-CIDR,43.160.0.0/15,no-resolve
 
-
-IP-CIDR,43.160.156.23,no-resolve
-
-IP-CIDR,43.160.156.172/32,no-resolve
 
 
   # 43.160.0.0/16 covers all 43.160.X.X IPs
@@ -16,36 +10,3 @@ IP-CIDR,43.160.0.0/16,no-resolve
 IP-CIDR,43.156.0.0/16,no-resolve
 
 
-
-
-# 腾讯云相关的域名D
-DOMAIN-SUFFIX,tencentcloud.com
-DOMAIN-SUFFIX,qcloud.com
-DOMAIN-KEYWORD,tencent
-DOMAIN-SUFFIX,tencentcloudapi.com
-DOMAIN-KEYWORD,tencentcloud
-
-
-# 区域 IP 规则
-IP-CIDR,101.32.0.0/20,no-resolve,SG-TC-SG
-IP-CIDR,101.32.32.0/20,no-resolve,SG-TC-SG
-IP-CIDR,101.32.64.0/20,no-resolve,SG-TC-SG
-IP-CIDR,101.32.96.0/20,no-resolve,SG-TC-SG
-IP-CIDR,101.32.128.0/22,no-resolve,SG-TC-SG
-IP-CIDR,101.32.132.0/22,no-resolve,SG-TC-SG
-IP-CIDR,101.32.136.0/21,no-resolve,SG-TC-SG
-
-# 区域代理：Tencent Cloud 新加坡节点
-IP-CIDR,43.160.144.0/20,no-resolve,SG-TC-SG
-
-
-
-
-# 腾讯云 API 域名流量
-DOMAIN-SUFFIX,tencentcloudapi.com,SG-TC-SG
-DOMAIN-KEYWORD,tencentcloud,SG-TC-SG
-
-
-IP-CIDR,43.160.0.0/16,no-resolve
-DOMAIN-SUFFIX,tencentcloudapi.com
-DOMAIN-KEYWORD,tencent
