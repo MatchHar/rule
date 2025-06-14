@@ -1,19 +1,52 @@
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
-# 机场订阅
+
+
+
+
+# 机场订阅，或以添加多个机场订阅，以下内容再次copy,并更改机场名为2.3.4
 proxy-providers:
   Airport1:
     url: "机场订阅"
     type: http
-    interval: 86400
+    interval: 86400  #机场自动更新时间，86400为24小时更新一次
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
+# 转换时用的请求头 User-Agent，在openwrt里添加订阅时会有选择项
+    header:
+      User-Agent:
+      - "Clash"
+      - "mihomo"
+      - "Clash.meta  
+#订阅用的额外参数，比如开启udp
+    override：
+      udp: true
+      down: "50 Mbps"
+      up: "10 Mbps"
+      skip-cert-verify: ture   #跳过证书，或false不跳过证书
+      
 
-# 节点信息
+
+
+
+
+
+
+
+
+      
+#这个为全局请求头，全局生效，上面的为单人机场订阅的请求头
+# global-ua: clash.meta
+
+
+# 节点信息，用于自建节点
 proxies:
-  - {name: 直连, type: direct}
+  - {name: 直连, type: direct, upd: true}    #不能删，用于直接时选择这个
+
+
+
 
 # 全局配置 
 port: 7890
@@ -21,7 +54,7 @@ socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
-allow-lan: true
+allow-lan: true      #允许局域网
 bind-address: "*"
 ipv6: false
 unified-delay: true
@@ -43,6 +76,11 @@ secret: ""
 external-ui: "/etc/mihomo/run/ui"
 external-ui-name: zashboard
 external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+# external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
+
+
+
+
 
 # 嗅探
 sniffer:
@@ -60,6 +98,9 @@ sniffer:
   skip-domain:
     - "+.baidu.com"
 
+
+
+
 # 入站  
 tun:
   enable: true
@@ -69,6 +110,10 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+
+
+
+
 
 # DNS模块
 dns:
@@ -92,6 +137,12 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
+
+
+
+
+
+
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
