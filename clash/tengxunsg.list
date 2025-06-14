@@ -27,6 +27,11 @@ IP-CIDR,43.160.144.0/20,no-resolve,SG-TC-SG
 
 
 
-  # 腾讯云 API 域名流量
+# 腾讯云 API 域名流量
 DOMAIN-SUFFIX,tencentcloudapi.com,SG-TC-SG
 DOMAIN-KEYWORD,tencentcloud,SG-TC-SG
+
+
+IP-CIDR,43.160.0.0/16,no-resolve
+DOMAIN-SUFFIX,tencentcloudapi.com
+DOMAIN-KEYWORD,tencent
