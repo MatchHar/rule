@@ -1,0 +1,12 @@
+# 台湾大哥大移动网关 IP 段,VoWiFi
+IP-CIDR,175.96.0.0/17,no-resolve
+
+
+
+
+# VoWiFi & 3GPP 移动网关域名
+DOMAIN-SUFFIX,epdg.epc.mnc097.mcc466.pub.3gppnetwork.org
+DOMAIN-SUFFIX,tfn.net.tw
+DOMAIN-SUFFIX,taiwanmobile.com
+# 泛匹配关键字
+DOMAIN-KEYWORD,tfn
