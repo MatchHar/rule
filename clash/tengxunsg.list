@@ -23,6 +23,10 @@ IP-CIDR,101.32.136.0/21,no-resolve,SG-TC-SG
 
 # 区域代理：Tencent Cloud 新加坡节点
 IP-CIDR,43.160.144.0/20,no-resolve,SG-TC-SG
+
+
+
+
   # 腾讯云 API 域名流量
 DOMAIN-SUFFIX,tencentcloudapi.com,SG-TC-SG
 DOMAIN-KEYWORD,tencentcloud,SG-TC-SG
